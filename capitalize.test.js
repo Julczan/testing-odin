@@ -1,5 +1,9 @@
 import capitalize from "./capitalize";
 
+test("Input is a string", () => {
+  expect(capitalize(1)).toBe("Input is not a string");
+});
+
 test("first letter capitalized when lowercase", () => {
   expect(capitalize("string")).toMatch(/String/);
 });
