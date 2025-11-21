@@ -1,4 +1,4 @@
-import reverseString from "./reverseString";
+import reverseString from "../Functions/reverseString";
 
 test("Input is a string", () => {
   expect(reverseString(1)).toBe("Input is not a string");

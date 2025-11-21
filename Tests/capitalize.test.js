@@ -1,4 +1,4 @@
-import capitalize from "./capitalize";
+import capitalize from "../Functions/capitalize";
 
 test("Input is a string", () => {
   expect(capitalize(1)).toBe("Input is not a string");
