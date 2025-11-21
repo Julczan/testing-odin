@@ -7,3 +7,14 @@ test("string is provided", () => {
 test("shift factor is provided", () => {
   expect(caesarCipher("string")).toBe("Please provide a shift factor");
 });
+
+test("shifting works", () => {
+  expect(caesarCipher("abc", 3)).toBe("def");
+  expect(caesarCipher("abce", 10)).toBe("klmo");
+  expect(caesarCipher("julek", 5)).toBe("ozqjp");
+  expect(caesarCipher("ceasar", 4)).toBe("giewev");
+});
+
+// test("alhpabet wraps", () => {
+//   expect(caesarCipher("xyz", 3)).toBe("abc");
+// });
