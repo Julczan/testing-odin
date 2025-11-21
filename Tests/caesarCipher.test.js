@@ -15,6 +15,9 @@ test("shifting works", () => {
   expect(caesarCipher("ceasar", 4)).toBe("giewev");
 });
 
-// test("alhpabet wraps", () => {
-//   expect(caesarCipher("xyz", 3)).toBe("abc");
-// });
+test("alhpabet wraps", () => {
+  expect(caesarCipher("xyz", 3)).toBe("abc");
+  expect(caesarCipher("julek", 20)).toBe("dofye");
+  expect(caesarCipher("julek", 60)).toBe("rctms");
+  expect(caesarCipher("caesar", 120)).toBe("squiqh");
+});

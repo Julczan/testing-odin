@@ -14,7 +14,10 @@ function shift(string, shiftFactor) {
   const shiftedStr = [];
 
   for (let i = 0; i < string.length; i++) {
-    const index = alphabet.indexOf(string[i]) + shiftFactor;
+    let index = alphabet.indexOf(string[i]) + shiftFactor;
+    if (index > 25) {
+      index %= 26;
+    }
     shiftedStr.push(alphabet[index]);
   }
   return shiftedStr.join("");
