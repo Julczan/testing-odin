@@ -30,7 +30,15 @@ function shift(string, shiftFactor) {
 }
 
 function getEncrypted(alphabet, letter, shiftFactor) {
+  const punctuation = '.,"!?:-()& '.split("");
+
   let index = alphabet.indexOf(letter) + shiftFactor;
+  let specialChar = punctuation.indexOf(letter);
+
+  if (specialChar !== -1) {
+    return punctuation[specialChar];
+  }
+
   if (index > 25) {
     index %= 26;
   }

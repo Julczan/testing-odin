@@ -28,3 +28,10 @@ test("follows the lettercase", () => {
   expect(caesarCipher("JuLEk", 60)).toBe("RcTMs");
   expect(caesarCipher("HeLLo", 30)).toBe("LiPPs");
 });
+
+test("Punctuation remains the same", () => {
+  expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+  expect(caesarCipher("Hello, Caesar made this cipher!", 14)).toBe(
+    "Vszzc, Qosgof aors hvwg qwdvsf!"
+  );
+});
