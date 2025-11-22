@@ -21,3 +21,10 @@ test("alhpabet wraps", () => {
   expect(caesarCipher("julek", 60)).toBe("rctms");
   expect(caesarCipher("caesar", 120)).toBe("squiqh");
 });
+
+test("follows the lettercase", () => {
+  expect(caesarCipher("Caesar", 2)).toBe("Ecguct");
+  expect(caesarCipher("CaeSaR", 2)).toBe("EcgUcT");
+  expect(caesarCipher("JuLEk", 60)).toBe("RcTMs");
+  expect(caesarCipher("HeLLo", 30)).toBe("LiPPs");
+});
