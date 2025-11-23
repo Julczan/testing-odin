@@ -2,6 +2,9 @@ import analyzeArray from "../Functions/analyzeArray";
 
 test("Input is an array of numbers", () => {
   expect(analyzeArray()).toBe("Please provide an array of numbers");
+  expect(analyzeArray(["3", "2"])).toBe("Please provide an array of numbers");
+  expect(analyzeArray(["3", 2])).toBe("Please provide an array of numbers");
+  expect(analyzeArray([3, "2"])).toBe("Please provide an array of numbers");
 });
 
 test("Function returns the number's average, min number, max number and the array length", () => {

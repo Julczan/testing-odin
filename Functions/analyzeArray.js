@@ -1,5 +1,5 @@
 function analyzeArray(array) {
-  if (!array) {
+  if (!array || checkIfNumber(array)) {
     return "Please provide an array of numbers";
   }
 
@@ -9,6 +9,15 @@ function analyzeArray(array) {
   const length = getArrayLength(array);
 
   return { average, min, max, length };
+}
+
+function checkIfNumber(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (typeof array[i] !== "number") {
+      return true;
+    }
+  }
+  return false;
 }
 
 function getArrayLength(array) {
