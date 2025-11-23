@@ -25,41 +25,25 @@ function getArrayLength(array) {
 }
 
 function getMax(array) {
-  const numbers = getNumbers(array);
-
-  const max = Math.max(...numbers);
+  const max = Math.max(...array);
   return max;
 }
 
 function getMin(array) {
-  const numbers = getNumbers(array);
-
-  const min = Math.min(...numbers);
+  const min = Math.min(...array);
   return min;
 }
 
 function getAverage(array) {
-  const numbers = getNumbers(array);
-
   let sum = 0;
 
-  numbers.forEach((number) => {
+  array.forEach((number) => {
     sum += number;
   });
 
-  const average = sum / numbers.length;
+  const average = sum / array.length;
 
   return average;
-}
-
-function getNumbers(array) {
-  const numbers = [];
-
-  for (let i = 0; i < array.length; i++) {
-    numbers.push(array[i]);
-  }
-
-  return numbers;
 }
 
 export default analyzeArray;
