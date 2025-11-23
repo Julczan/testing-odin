@@ -4,16 +4,30 @@ function analyzeArray(array) {
   }
 
   const average = getAverage(array);
+  const min = getMin(array);
 
-  return { average };
+  return { average, min };
 }
 
-function getAverage(array) {
+function getMin(array) {
+  const numbers = getNumbers(array);
+
+  const min = Math.min(...numbers);
+  return min;
+}
+
+function getNumbers(array) {
   const numbers = [];
 
   for (let i = 0; i < array.length; i++) {
     numbers.push(array[i]);
   }
+
+  return numbers;
+}
+
+function getAverage(array) {
+  const numbers = getNumbers(array);
 
   let sum = 0;
 
