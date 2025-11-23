@@ -6,8 +6,13 @@ function analyzeArray(array) {
   const average = getAverage(array);
   const min = getMin(array);
   const max = getMax(array);
+  const length = getArrayLength(array);
 
-  return { average, min, max };
+  return { average, min, max, length };
+}
+
+function getArrayLength(array) {
+  return array.length;
 }
 
 function getMax(array) {
