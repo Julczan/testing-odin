@@ -5,8 +5,16 @@ function analyzeArray(array) {
 
   const average = getAverage(array);
   const min = getMin(array);
+  const max = getMax(array);
 
-  return { average, min };
+  return { average, min, max };
+}
+
+function getMax(array) {
+  const numbers = getNumbers(array);
+
+  const max = Math.max(...numbers);
+  return max;
 }
 
 function getMin(array) {
@@ -14,16 +22,6 @@ function getMin(array) {
 
   const min = Math.min(...numbers);
   return min;
-}
-
-function getNumbers(array) {
-  const numbers = [];
-
-  for (let i = 0; i < array.length; i++) {
-    numbers.push(array[i]);
-  }
-
-  return numbers;
 }
 
 function getAverage(array) {
@@ -38,6 +36,16 @@ function getAverage(array) {
   const average = sum / numbers.length;
 
   return average;
+}
+
+function getNumbers(array) {
+  const numbers = [];
+
+  for (let i = 0; i < array.length; i++) {
+    numbers.push(array[i]);
+  }
+
+  return numbers;
 }
 
 export default analyzeArray;
