@@ -1,5 +1,5 @@
 function analyzeArray(array) {
-  if (!array || checkIfNumber(array)) {
+  if (!array || !Array.isArray(array) || checkIfNumber(array)) {
     return "Please provide an array of numbers";
   }
 
